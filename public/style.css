@@ -83,14 +83,22 @@ header .nav-links li a:hover {
   background-color: #45a049;
 }
 
-#services {
+#services,
+#about,
+#contact,
+#redline {
+  width: 100%; /* Ensure these sections take up the full width */
+  margin: 0; /* Remove any margin */
   padding: 40px 15px;
-  background-color: #f9f9f9;
-  width: 100%;  /* Ensure full width */
-  margin: 0;
 }
 
-#services .section-title h2 {
+#services {
+  background-color: #f9f9f9;
+}
+
+#services .section-title h2,
+#about .section-title h2,
+#contact .section-title h2 {
   font-size: 30px;
   margin-bottom: 20px;
 }
@@ -121,15 +129,7 @@ header .nav-links li a:hover {
 }
 
 #about {
-  padding: 40px 15px;
   color: rgb(243, 240, 240);
-  width: 100%;  /* Ensure full width */
-  margin: 0;
-}
-
-#about .section-title h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
 }
 
 #about p,
@@ -152,23 +152,13 @@ header .nav-links li a:hover {
 }
 
 #contact {
-  padding: 40px 15px;
   background-color: #f4f4f4;
-  width: 100%;  /* Ensure full width */
-  margin: 0;
-}
-
-#contact .section-title h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
 }
 
 #redline {
   background-color: rgb(0, 0, 0);
   color: red;
   text-align: center;
-  padding: 40px 15px;
-  width: 100%;  /* Ensure full width */
 }
 
 .redline-text {
@@ -294,6 +284,7 @@ footer .social-links li a:hover {
     font-size: 35px; /* Smaller redline text */
   }
 }
+
 
 
 @media screen and (max-width: 480px) {
