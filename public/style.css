@@ -5,10 +5,12 @@ body {
   padding: 0;
   font-family: 'Shadows Into Light', cursive;
   background: url('https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb8c002a7-e023-4b25-b200-e65f76c05b80_1024x1024.jpeg') no-repeat center center fixed;
-  background-size: cover;
+  background-size: cover;  /* Ensures the background image covers the screen */
+  background-position: center;
   color: #333;
   height: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%;  /* Ensure the body takes full width */
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 header {
@@ -84,6 +86,8 @@ header .nav-links li a:hover {
 #services {
   padding: 40px 15px;
   background-color: #f9f9f9;
+  width: 100%;  /* Ensure full width */
+  margin: 0;
 }
 
 #services .section-title h2 {
@@ -119,6 +123,8 @@ header .nav-links li a:hover {
 #about {
   padding: 40px 15px;
   color: rgb(243, 240, 240);
+  width: 100%;  /* Ensure full width */
+  margin: 0;
 }
 
 #about .section-title h2 {
@@ -148,6 +154,8 @@ header .nav-links li a:hover {
 #contact {
   padding: 40px 15px;
   background-color: #f4f4f4;
+  width: 100%;  /* Ensure full width */
+  margin: 0;
 }
 
 #contact .section-title h2 {
@@ -160,7 +168,7 @@ header .nav-links li a:hover {
   color: red;
   text-align: center;
   padding: 40px 15px;
-  width: 100%;
+  width: 100%;  /* Ensure full width */
 }
 
 .redline-text {
@@ -214,23 +222,14 @@ footer .social-links li a:hover {
 
 /* Mobile Specific Adjustments for iPhone 15 */
 @media screen and (max-width: 768px) {
-  /* Ensure sections cover the full width on smaller screens */
-  #services,
-  #about,
-  #contact {
-    width: 100%; /* Ensure full width */
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
+  header .nav-links {
+    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+    justify-content: center; /* Center align the links */
   }
 
-  #services .section-title h2 {
-    font-size: 28px;
-  }
-
-  .service-card {
-    min-width: 240px;
+  header .nav-links li {
+    display: inline-block;
+    margin: 5px;
   }
 
   #hero .hero-content h2 {
@@ -241,21 +240,38 @@ footer .social-links li a:hover {
     font-size: 16px;
   }
 
+  #services .section-title h2 {
+    font-size: 28px;
+  }
+
+  .service-card {
+    min-width: 240px;
+  }
+
+  #about .section-title h2 {
+    font-size: 28px;
+  }
+
+  #contact .section-title h2 {
+    font-size: 28px;
+  }
+
   #redline .redline-text {
-    font-size: 40px; /* Smaller redline text */
+    font-size: 40px; /* Adjust the font size of the redline text */
   }
 }
 
 @media screen and (max-width: 480px) {
-  /* Ensure sections cover the full width on very small screens */
-  #services,
-  #about,
-  #contact {
-    width: 100%; /* Ensure full width */
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
+  header .nav-links li a {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  #hero .hero-content h2 {
+    font-size: 26px;
+  }
+
+  #hero .hero-content p {
+    font-size: 14px;
   }
 
   #services .section-title h2 {
@@ -266,12 +282,12 @@ footer .social-links li a:hover {
     min-width: 200px;
   }
 
-  #hero .hero-content h2 {
+  #about .section-title h2 {
     font-size: 26px;
   }
 
-  #hero .hero-content p {
-    font-size: 14px;
+  #contact .section-title h2 {
+    font-size: 26px;
   }
 
   #redline .redline-text {
