@@ -214,22 +214,15 @@ footer .social-links li a:hover {
 
 /* Mobile Specific Adjustments for iPhone 15 */
 @media screen and (max-width: 768px) {
-  header .nav-links {
-    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
-    justify-content: center; /* Center align the links */
-  }
-
-  header .nav-links li {
-    display: inline-block;
-    margin: 5px;
-  }
-
-  #hero .hero-content h2 {
-    font-size: 30px;
-  }
-
-  #hero .hero-content p {
-    font-size: 16px;
+  /* Ensure sections cover the full width on smaller screens */
+  #services,
+  #about,
+  #contact {
+    width: 100%; /* Ensure full width */
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   #services .section-title h2 {
@@ -240,18 +233,52 @@ footer .social-links li a:hover {
     min-width: 240px;
   }
 
-  #about .section-title h2 {
-    font-size: 28px;
+  #hero .hero-content h2 {
+    font-size: 30px;
   }
 
-  #contact .section-title h2 {
-    font-size: 28px;
+  #hero .hero-content p {
+    font-size: 16px;
   }
 
   #redline .redline-text {
-    font-size: 40px; /* Adjust the font size of the redline text */
+    font-size: 40px; /* Smaller redline text */
   }
 }
+
+@media screen and (max-width: 480px) {
+  /* Ensure sections cover the full width on very small screens */
+  #services,
+  #about,
+  #contact {
+    width: 100%; /* Ensure full width */
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #services .section-title h2 {
+    font-size: 24px;
+  }
+
+  .service-card {
+    min-width: 200px;
+  }
+
+  #hero .hero-content h2 {
+    font-size: 26px;
+  }
+
+  #hero .hero-content p {
+    font-size: 14px;
+  }
+
+  #redline .redline-text {
+    font-size: 35px; /* Smaller redline text */
+  }
+}
+
 
 @media screen and (max-width: 480px) {
   header .nav-links li a {
