@@ -14,25 +14,25 @@ body {
 header {
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
-  padding: 10px 0;
+  padding: 8px 0;
 }
 
 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 header .logo h1 {
-  font-size: 24px;
+  font-size: 22px;
   margin: 0;
 }
 
 header .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 
 header .nav-links li {
@@ -42,7 +42,7 @@ header .nav-links li {
 header .nav-links li a {
   text-decoration: none;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 header .nav-links li a:hover {
@@ -54,24 +54,24 @@ header .nav-links li a:hover {
   background-size: cover;
   color: white;
   text-align: center;
-  padding: 100px 20px;
-  height: 100vh; /* Make the hero section cover the full viewport */
+  padding: 70px 20px;
+  height: 80vh; /* Adjust to fit screen better */
 }
 
 #hero .hero-content h2 {
-  font-size: 40px;
+  font-size: 32px;
   margin-bottom: 10px;
 }
 
 #hero .hero-content p {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 20px;
 }
 
 .cta-button {
   background-color: #4CAF50;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border-radius: 5px;
   text-decoration: none;
   font-size: 18px;
@@ -82,52 +82,53 @@ header .nav-links li a:hover {
 }
 
 #services {
-  padding: 50px 20px;
+  padding: 40px 15px;
   background-color: #f9f9f9;
 }
 
 #services .section-title h2 {
-  font-size: 36px;
+  font-size: 30px;
   margin-bottom: 20px;
 }
 
 .service-cards {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap; /* Make sure the service cards wrap properly */
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .service-card {
   background-color: white;
-  padding: 20px;
+  padding: 18px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   flex: 1;
-  min-width: 280px; /* Ensure that the cards don't shrink too small */
+  min-width: 250px;
+  max-width: 320px;
 }
 
 .service-card h3 {
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 10px;
 }
 
 .service-card p {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #about {
-  padding: 50px 20px;
+  padding: 40px 15px;
   color: rgb(243, 240, 240);
 }
 
 #about .section-title h2 {
-  font-size: 36px;
+  font-size: 30px;
   margin-bottom: 20px;
 }
 
 #about p,
 #about ul {
-  font-size: 18px;
+  font-size: 16px;
   color: rgb(255, 255, 255);
 }
 
@@ -145,12 +146,12 @@ header .nav-links li a:hover {
 }
 
 #contact {
-  padding: 50px 20px;
+  padding: 40px 15px;
   background-color: #f4f4f4;
 }
 
 #contact .section-title h2 {
-  font-size: 36px;
+  font-size: 30px;
   margin-bottom: 20px;
 }
 
@@ -158,12 +159,12 @@ header .nav-links li a:hover {
   background-color: rgb(0, 0, 0);
   color: red;
   text-align: center;
-  padding: 50px 20px;
+  padding: 40px 15px;
   width: 100%;
 }
 
 .redline-text {
-  font-size: 50px;
+  font-size: 45px;
   color: white;
   animation: glitch 1s infinite alternate;
   text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.8);
@@ -211,7 +212,7 @@ footer .social-links li a:hover {
   color: #4CAF50;
 }
 
-/* Mobile Specific Changes */
+/* Mobile Specific Adjustments for iPhone 15 */
 @media screen and (max-width: 768px) {
   header .nav-links {
     flex-wrap: wrap; /* Allow links to wrap on smaller screens */
@@ -220,15 +221,15 @@ footer .social-links li a:hover {
 
   header .nav-links li {
     display: inline-block;
-    margin: 5px; /* Adjust space between links */
+    margin: 5px;
   }
 
   #hero .hero-content h2 {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   #hero .hero-content p {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   #services .section-title h2 {
@@ -236,15 +237,15 @@ footer .social-links li a:hover {
   }
 
   .service-card {
-    min-width: 250px;
+    min-width: 240px;
   }
 
   #about .section-title h2 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   #contact .section-title h2 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   #redline .redline-text {
@@ -254,15 +255,15 @@ footer .social-links li a:hover {
 
 @media screen and (max-width: 480px) {
   header .nav-links li a {
-    font-size: 16px; /* Smaller font size for mobile */
+    font-size: 14px; /* Smaller font size for mobile */
   }
 
   #hero .hero-content h2 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   #hero .hero-content p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   #services .section-title h2 {
@@ -270,18 +271,19 @@ footer .social-links li a:hover {
   }
 
   .service-card {
-    min-width: 230px;
+    min-width: 200px;
   }
 
   #about .section-title h2 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   #contact .section-title h2 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   #redline .redline-text {
     font-size: 35px; /* Smaller redline text */
   }
 }
+
