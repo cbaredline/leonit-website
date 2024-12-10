@@ -8,6 +8,7 @@ body {
   background-size: cover;
   color: #333;
   height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 header {
@@ -54,6 +55,7 @@ header .nav-links li a:hover {
   color: white;
   text-align: center;
   padding: 100px 20px;
+  height: 100vh; /* Make the hero section cover the full viewport */
 }
 
 #hero .hero-content h2 {
@@ -92,6 +94,7 @@ header .nav-links li a:hover {
 .service-cards {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap; /* Make sure the service cards wrap properly */
 }
 
 .service-card {
@@ -100,6 +103,7 @@ header .nav-links li a:hover {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   flex: 1;
+  min-width: 280px; /* Ensure that the cards don't shrink too small */
 }
 
 .service-card h3 {
@@ -155,6 +159,7 @@ header .nav-links li a:hover {
   color: red;
   text-align: center;
   padding: 50px 20px;
+  width: 100%;
 }
 
 .redline-text {
@@ -206,21 +211,50 @@ footer .social-links li a:hover {
   color: #4CAF50;
 }
 
+/* Mobile Specific Changes */
 @media screen and (max-width: 768px) {
   header .nav-links {
-    flex-wrap: wrap; 
-    justify-content: center; 
+    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+    justify-content: center; /* Center align the links */
   }
 
   header .nav-links li {
     display: inline-block;
-    margin: 5px; 
+    margin: 5px; /* Adjust space between links */
+  }
+
+  #hero .hero-content h2 {
+    font-size: 32px;
+  }
+
+  #hero .hero-content p {
+    font-size: 18px;
+  }
+
+  #services .section-title h2 {
+    font-size: 28px;
+  }
+
+  .service-card {
+    min-width: 250px;
+  }
+
+  #about .section-title h2 {
+    font-size: 30px;
+  }
+
+  #contact .section-title h2 {
+    font-size: 30px;
+  }
+
+  #redline .redline-text {
+    font-size: 40px; /* Adjust the font size of the redline text */
   }
 }
 
 @media screen and (max-width: 480px) {
   header .nav-links li a {
-    font-size: 16px; 
+    font-size: 16px; /* Smaller font size for mobile */
   }
 
   #hero .hero-content h2 {
@@ -229,5 +263,25 @@ footer .social-links li a:hover {
 
   #hero .hero-content p {
     font-size: 16px;
+  }
+
+  #services .section-title h2 {
+    font-size: 24px;
+  }
+
+  .service-card {
+    min-width: 230px;
+  }
+
+  #about .section-title h2 {
+    font-size: 28px;
+  }
+
+  #contact .section-title h2 {
+    font-size: 28px;
+  }
+
+  #redline .redline-text {
+    font-size: 35px; /* Smaller redline text */
   }
 }
