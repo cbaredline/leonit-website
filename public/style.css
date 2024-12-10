@@ -34,6 +34,10 @@ header .nav-links {
   gap: 20px;
 }
 
+header .nav-links li {
+  display: inline-block;
+}
+
 header .nav-links li a {
   text-decoration: none;
   color: white;
@@ -179,6 +183,7 @@ header .nav-links li a:hover {
   font-weight: bold;
   color: red;
 }
+
 footer {
   background-color: #333;
   color: white;
@@ -203,25 +208,21 @@ footer .social-links li a:hover {
 
 @media screen and (max-width: 768px) {
   header .nav-links {
-    flex-direction: column;
-    gap: 10px;
+    flex-wrap: wrap; 
+    justify-content: center; 
   }
 
-  #hero {
-    padding: 60px 20px;
-  }
-
-  .service-cards {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .service-card {
-    width: 100%;
+  header .nav-links li {
+    display: inline-block;
+    margin: 5px; 
   }
 }
 
 @media screen and (max-width: 480px) {
+  header .nav-links li a {
+    font-size: 16px; 
+  }
+
   #hero .hero-content h2 {
     font-size: 28px;
   }
@@ -230,4 +231,3 @@ footer .social-links li a:hover {
     font-size: 16px;
   }
 }
- 
