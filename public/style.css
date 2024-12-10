@@ -1,3 +1,4 @@
+/* Reset margin and padding for all elements */
 *,
 *::before,
 *::after {
@@ -6,32 +7,41 @@
   box-sizing: border-box;
 }
 
+/* Ensure the body and HTML take full width and height */
 html, body {
   min-height: 100%;
+  width: 100%;
   font-family: 'Shadows Into Light', cursive;
   background: url('https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb8c002a7-e023-4b25-b200-e65f76c05b80_1024x1024.jpeg') no-repeat center center fixed;
   background-size: cover;
   color: #333;
 }
 
+/* Ensure no extra space at the top or bottom of sections */
 section {
+  width: 100%; /* Make sure sections fill the width */
   padding: 0;
 }
 
+/* Ensure hero section stretches horizontally and vertically */
 #hero {
   background: url('https://example.com/hero-image.jpg') no-repeat center center fixed;
   background-size: cover;
   color: white;
   text-align: center;
-  padding: 60px 20px;  
+  padding: 60px 20px; /* Reduced padding to remove excess space */
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* Navigation links */
 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  margin-bottom: 10px;  
+  margin-bottom: 10px; /* Reduce bottom margin */
+  width: 100%;
 }
 
 header .nav-links {
@@ -39,10 +49,11 @@ header .nav-links {
   display: flex;
   gap: 20px;
   margin: 0;
+  padding: 0;
 }
 
 header .nav-links li {
-  flex: 1; 
+  flex: 1; /* Ensure each link takes equal space on mobile */
 }
 
 header .nav-links li a {
@@ -55,12 +66,15 @@ header .nav-links li a:hover {
   color: #4CAF50;
 }
 
+/* Make sure services section stretches fully */
 #services {
-  padding: 40px 20px; 
+  padding: 40px 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #services .section-title h2 {
-  font-size: 32px; 
+  font-size: 32px; /* Reduced font size */
   margin-bottom: 15px;
 }
 
@@ -68,6 +82,7 @@ header .nav-links li a:hover {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .service-card {
@@ -88,12 +103,13 @@ header .nav-links li a:hover {
   font-size: 16px;
 }
 
+/* Redline section should stretch full width */
 #redline {
   background-color: rgb(0, 0, 0);
   color: red;
   text-align: center;
   padding: 50px 20px;
-  width: 100%; /* Ensure the redline takes the full width */
+  width: 100%; /* Ensure redline takes full width */
 }
 
 .redline-text {
@@ -119,13 +135,16 @@ header .nav-links li a:hover {
   }
 }
 
+/* Footer should also stretch full width */
 footer {
   background-color: #333;
   color: white;
-  padding: 15px 20px; 
+  padding: 15px 20px; /* Reduced padding */
   text-align: center;
+  width: 100%;
 }
 
+/* Social links smaller on mobile */
 footer .social-links {
   list-style: none;
   display: flex;
@@ -143,6 +162,7 @@ footer .social-links li a:hover {
   color: #4CAF50;
 }
 
+/* Media queries for small screens */
 @media screen and (max-width: 768px) {
   header .nav-links {
     flex-direction: column;
@@ -176,4 +196,3 @@ footer .social-links li a:hover {
     font-size: 16px;
   }
 }
-
